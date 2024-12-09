@@ -1,7 +1,6 @@
 import java.io.File
 
 fun main() {
-    print("start")
     val result = Solution1a().regex()
 
     println(result)
@@ -13,7 +12,7 @@ class Solution1a {
         val leftLists: MutableList<Long> = mutableListOf()
         val rightLists: MutableList<Long> = mutableListOf()
         val regex = "[0-9]{5}\\s?".toRegex()
-        val text = File("sample.txt").readText()
+        val text = File("inputDay1.txt").readText()
         var matchResult = regex.find(text)
 
         leftLists.add(matchResult!!.value.trim().toLong())
